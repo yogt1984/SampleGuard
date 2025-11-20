@@ -4,12 +4,20 @@ pub mod sample;
 pub mod tag;
 pub mod error;
 pub mod integrity;
+pub mod inventory;
+pub mod database;
+pub mod temperature;
+pub mod audit;
 
 pub use error::{SampleGuardError, Result};
 pub use sample::{Sample, SampleStatus, SampleMetadata};
 pub use tag::{RFIDTag, TagData, TagMemoryLayout};
 pub use reader::{RFIDReader, ReaderConfig, ReaderCapabilities};
 pub use integrity::{IntegrityValidator, ValidationResult};
+pub use inventory::{InventoryManager, InventoryFilter, TagScanResult, InventoryReport};
+pub use database::{Database, HistoryEntry, DatabaseStatistics};
+pub use temperature::{TemperatureMonitor, TemperatureSensor, TemperatureReading, TemperatureViolation, TemperatureStatistics};
+pub use audit::{AuditLogger, AuditEventType, AuditEvent, AuditSeverity, AuditStatistics};
 
 /// Main entry point for SampleGuard RFID system
 pub struct SampleGuard {

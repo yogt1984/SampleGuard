@@ -1,4 +1,3 @@
-use sample_guard::*;
 use sample_guard::reader::{RFIDReader, ReaderConfig, ReaderFrequency};
 
 /// Test suite for RFID hardware evaluation
