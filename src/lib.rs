@@ -9,6 +9,7 @@ pub mod database;
 pub mod temperature;
 pub mod audit;
 pub mod api;
+pub mod hardware;
 
 pub use error::{SampleGuardError, Result};
 pub use sample::{Sample, SampleStatus, SampleMetadata};
@@ -19,6 +20,8 @@ pub use inventory::{InventoryManager, InventoryFilter, TagScanResult, InventoryR
 pub use database::{Database, HistoryEntry, DatabaseStatistics};
 pub use temperature::{TemperatureMonitor, TemperatureSensor, TemperatureReading, TemperatureViolation, TemperatureStatistics};
 pub use audit::{AuditLogger, AuditEventType, AuditEvent, AuditSeverity, AuditStatistics};
+pub use hardware::{ImpinjSpeedwayReader, ZebraFX9600Reader, TagSimulator, SimulatedTag, HardwareDriver};
+pub use hardware::protocol::{ReaderProtocol, ReaderCommand, ProtocolResponse, MemoryBank};
 
 /// Main entry point for SampleGuard RFID system
 pub struct SampleGuard {

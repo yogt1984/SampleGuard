@@ -52,3 +52,7 @@ harness = false
 name = "server"
 path = "src/bin/server.rs"
 
+[[bin]]
+name = "hardware_demo"
+path = "src/bin/hardware_demo.rs"
+
