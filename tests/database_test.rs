@@ -1,4 +1,3 @@
-use sample_guard::*;
 use sample_guard::database::Database;
 use sample_guard::sample::{Sample, SampleMetadata, SampleStatus};
 use chrono::Utc;

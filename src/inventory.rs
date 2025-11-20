@@ -1,6 +1,7 @@
 use crate::error::{SampleGuardError, Result};
 use crate::reader::RFIDReader;
 use crate::sample::Sample;
+#[allow(unused_imports)]
 use crate::tag::{RFIDTag, TagData};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;

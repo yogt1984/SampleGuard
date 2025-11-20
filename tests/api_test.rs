@@ -1,6 +1,5 @@
 use actix_web::{test, web, App};
 use sample_guard::api::{configure_routes, create_app_state};
-use sample_guard::api::handlers::AppState;
 use sample_guard::api::models::*;
 use chrono::Utc;
 
@@ -305,8 +304,8 @@ async fn test_scan_inventory() {
     let resp = test::call_service(&app, req).await;
     assert!(resp.status().is_success());
     
-    let body: InventoryScanResponse = test::read_body_json(resp).await;
-    assert!(body.count >= 0);
+    let _body: InventoryScanResponse = test::read_body_json(resp).await;
+    // count is always non-negative (usize)
 }
 
 #[actix_web::test]
@@ -342,8 +341,8 @@ async fn test_read_temperature() {
     let resp = test::call_service(&app, req).await;
     assert!(resp.status().is_success());
     
-    let body: TemperatureResponse = test::read_body_json(resp).await;
-    assert!(body.violations >= 0);
+    let _body: TemperatureResponse = test::read_body_json(resp).await;
+    // violations is always non-negative (usize)
 }
 
 #[actix_web::test]
@@ -435,8 +434,8 @@ async fn test_get_statistics() {
     let resp = test::call_service(&app, req).await;
     assert!(resp.status().is_success());
     
-    let body: StatisticsResponse = test::read_body_json(resp).await;
-    assert!(body.samples >= 0);
+    let _body: StatisticsResponse = test::read_body_json(resp).await;
+    // samples is always non-negative (usize)
 }
 
 #[actix_web::test]
