@@ -1,4 +1,4 @@
-.PHONY: all test run clean build
+.PHONY: all test run clean build demo
 
 # Default target: run the application
 all: run
@@ -10,6 +10,9 @@ run:
 # Run all tests
 test:
 	cargo test
+
+demo:
+	cargo run --bin system_demo
 
 # Build the project
 build:

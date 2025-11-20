@@ -56,3 +56,7 @@ path = "src/bin/server.rs"
 name = "hardware_demo"
 path = "src/bin/hardware_demo.rs"
 
+[[bin]]
+name = "system_demo"
+path = "src/bin/system_demo.rs"
+
