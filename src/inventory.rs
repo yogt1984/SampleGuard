@@ -267,7 +267,7 @@ mod tests {
         // Create and write a sample
         let sample = create_test_sample("TEST-001");
         let tag = sample.to_tag().unwrap();
-        let tag_data = TagData::new(tag.to_bytes().unwrap());
+        let tag_data = crate::tag::TagData::new(tag.to_bytes().unwrap());
         reader.write_tag(&tag_data).unwrap();
         
         // Scan tags

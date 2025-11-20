@@ -8,6 +8,7 @@ pub mod inventory;
 pub mod database;
 pub mod temperature;
 pub mod audit;
+pub mod api;
 
 pub use error::{SampleGuardError, Result};
 pub use sample::{Sample, SampleStatus, SampleMetadata};

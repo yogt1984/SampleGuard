@@ -1,0 +1,2 @@
+feat: implement REST API server with actix-web, 28+ tests, and full CRUD endpoints
+
